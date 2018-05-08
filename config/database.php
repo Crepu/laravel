@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlsrv'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,7 +32,15 @@ return [
     */
 
     'connections' => [
-
+        'sqlsrv' => [
+           'driver' => 'sqlsrv',
+           'host' => 'laravel-testing-db.database.windows.net:1443', // Provide IP address here
+           'database' => 'laravel-testing-db',
+           'username' => 'homestead',
+           'password' => 'L,pass,123',
+           'prefix' => ''
+        ],
+        
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
