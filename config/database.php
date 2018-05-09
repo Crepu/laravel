@@ -35,7 +35,7 @@ return [
         'sqlsrv' => [
            'driver' => 'sqlsrv',
            'host' => 'laravel-testing-db.database.windows.net:1443', // Provide IP address here
-           'database' => 'laravel-testing-db',
+           'database' => 'laravel',
            'username' => 'homestead',
            'password' => 'L,pass,123',
            'prefix' => ''
@@ -49,11 +49,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'laravel-testing-db.mysql.database.azure.com'),
+            'host' => env('DB_HOST'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'homestead'),
-            'password' => env('DB_PASSWORD', 'L,pass,123'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
